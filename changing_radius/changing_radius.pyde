@@ -2,15 +2,15 @@
 # Create a circle that changes sizes when a key is pressed
 
 # setting the initial valaue of the global variable radius
-radius = 10
+radius = 10.0
 
 
 def setup ():
     background(0)
-    ellipse(150, 150, radius , radius)
+    circle(150, 150, radius)
     size (300, 300)
-    print("Hit + to increase the radius")
-    print("Hit - to decrease the radius")
+    print("Hit the UP arrow to increase the radius")
+    print("Hit the DOWN arrow to decrease the radius")
 
 
 def change_radius():
@@ -19,12 +19,14 @@ def change_radius():
     # change the value
     global radius 
     # when the plus sign is pressed, the radius increases by 5 pixels
-    if key == "+":
+    if keyCode == UP:
         return radius + 5
     # add code so the radius is decreased by 5 is the minus
     # sign is pressed
-    elif key == "-":
+    elif keyCode == DOWN:
         return radius - 5
+    else:
+        print("Invalid Key")
  
 
 def keyPressed():
@@ -36,5 +38,5 @@ def draw():
     global radius
     background(0)
     # a circle with a radius that changes when a key is pressed
-    ellipse(150, 150, radius , radius)
+    circle(150, 150, radius)
     return
