@@ -20,11 +20,11 @@ def change_radius():
     global radius 
     # when the plus sign is pressed, the radius increases by 5 pixels
     if keyCode == UP:
-        return radius + 5
+        radius = radius + 5
     # add code so the radius is decreased by 5 is the minus
     # sign is pressed
     elif keyCode == DOWN:
-        return radius - 5
+        radius = radius - 5
     else:
         print("Invalid Key")
  
