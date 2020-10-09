@@ -31,7 +31,7 @@ def change_radius():
 
 def keyPressed():
     global radius
-    radius = change_radius()
+    change_radius()
 
 
 def draw():
